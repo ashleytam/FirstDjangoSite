@@ -1,9 +1,526 @@
-<html>
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
     <head>
-        <title>Ola's blog</title>
+        <meta charset="utf-8">
+        
+        <!-- TITLE OF SITE-->
+        <title> Ashley Tam </title>
+        
+        <!-- META TAG -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="CV, Portfolio, Resume">
+        <meta name="author" content="Ashley Tam">
+        
+        <!-- FAVICON -->
+        <link rel="icon" href="assets/images/favicon.ico">
+        <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/apple-icon-72x72.png' %}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{% static 'images/apple-icon-76x76.png' %}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/apple-icon-114x114.png' %}">
+
+        <!-- ========================================
+                Stylesheets
+        ==========================================--> 
+        
+        <!-- MATERIALIZE CORE CSS -->
+        <link href="{% static 'css/materialize.min.css' %}" rel="stylesheet">
+        
+        <!-- ADDITIONAL CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        
+        <!-- FONTS -->
+        <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+        <!--FONTAWESOME CSS-->
+        <link href="{% static 'icons/font-awesome-4.1.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"> 
+
+        <!-- CUSTOM STYLE -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+        <!-- RESPONSIVE CSS-->
+        <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+        
+        <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif] -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        
     </head>
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+        <!-- Start Container-->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- to top !-->
+                <a href="#top"><div class="to-top fa fa-arrow-up hide-on-med-and-down"></div></a>
+            <!-- =========================================
+                           SIDEBAR   
+            ==========================================-->
+                <!-- Start Sidebar -->
+                <aside class="col l4 m12 s12 sidebar z-depth-1" id="sidebar">
+                    <!--  Sidebar row -->
+                    <div class="row">                      
+                        <!--  top section   -->
+                        <div class="heading">                            
+                            <!-- ====================
+                                      IMAGE   
+                            ==========================-->
+                            <div class="feature-img">
+                                <a href="index.html"><img src="{% static 'images/profile-img.jpg' %}" class="responsive-img" alt=""></a> 
+                            </div>                            
+                            <!-- =========================================
+                                       NAVIGATION   
+                            ==========================================-->
+                            <div class=" nav-icon hide-on-med-and-up">
+                                <nav>
+                                    <div class="nav-wrapper">
+                                      <ul id="nav-mobile" class="side-nav">                                  
+                                        <li><a href="#cover">Cover Letter</a></li>                                        
+                                        <li><a href="#work">Work Experience</a></li>
+                                        <li><a href="#education">Education</a></li>
+                                         <li><a href="#skills">Skills</a></li>
+                                        <li><a href="#references">References</a></li>
+                                      </ul>
+                                      <a href="#" data-activates="nav-mobile" class="button-collapse  "><i class="mdi-navigation-menu"></i></a>
+                                    </div>
+                                </nav>
+                            </div>                            
+                            <!-- ========================================
+                                       NAME AND TAGLINE
+                            ==========================================-->
+                            <div class="title col s12 m12 l9 right  wow fadeIn" data-wow-delay="0.1s">   
+                                <h2>Ashley Tam</h2> <!-- title name -->
+                                <span>FRONT-END WEB DEVELOPER </br> GRAPHIC DESIGNER</br> UX DESIGNER</span>  <!-- tagline -->
+                            </div>                         
+                        </div>
+                         <!-- sidebar info -->
+                        <div class="col l12 m12 s12 sort-info sidebar-item">
+                            <div class="row">                               
+                                <div class="col m12 s12 l3 icon"> <!-- icon -->
+                                   <i class="fa fa-user"></i>
+                                </div>                                
+                                <div class="col m12 s12 l9 info wow fadeIn a1" data-wow-delay="0.1s" > <!-- text -->
+                                    <div class="section-item-details">
+                                        <p>I am a Graphic Designer, Illustrator and Front-end Web Developer with a keen eye for design. My passion is making things look pretty as well as highly user friendly! I love to learn new techniques and skills and believe that no challenge is too hard to tackle. </p>
+                                    </div>             
+                                </div>
+                            </div>         
+                        </div>
+                        <!-- MOBILE NUMBER -->
+                        <div class="col l12 m12 s12  mobile sidebar-item">
+                            <div class="row">                                
+                                <div class="col m12 s12 l3 icon">
+                                    <i class="fa fa-phone"></i> <!-- icon -->
+                                </div>                                
+                                <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s" >
+                                    <div class="section-item-details">
+                                        <div class="personal">
+                                            <h4><a href="tel:555-555-5555">(613)-701-3311</a></h4> <!-- Number -->             
+                                            <span>Phone</span> 
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+
+                            </div>             
+                        </div>
+                        <!--  EMAIL -->
+                        <div class="col l12 m12 s12  email sidebar-item ">
+                            <div class="row">                                
+                                <div class="col m12 s12 l3 icon">
+                                    <i class="fa fa-envelope"></i> <!-- icon -->
+                                </div>                                
+                                <div class="col m12 s12 l9 info wow fadeIn a3" data-wow-delay="0.3s">
+                                    <div class="section-item-details">
+                                        <div class="personal">                                    
+                                            <h4><a href="mailto:ashleytam6@gmail.com">ashleytam6@gmail.com</a></h4> <!-- Email -->
+                                            <span>Email</span> 
+                                        </div>
+                                        
+                                    </div>
+                                </div> 
+                            </div>          
+                        </div>
+                        <!-- ADDRESS  -->
+                        <div class="col l12 m12 s12  address sidebar-item ">
+                            <div class="row">                                
+                                <div class="col l3 m12  s12 icon">
+                                    <i class="fa fa-home"></i> <!-- icon -->
+                                </div>                                
+                                <div class="col m12 s12 l9 info wow fadeIn a4" data-wow-delay="0.4s">
+                                    <div class="section-item-details">
+                                        <div class="address-details"> <!-- address  -->
+                                            <h4>306 Trailsedge Way <br>
+                                            Ottawa, Ontario.<br>
+                                            <span>K1W 0E9</span></h4> 
+                                        </div>                         
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+                        <!-- SOCIAL MEDIA  -->
+                        <div class="col l12 m12 s12  address sidebar-item ">
+                            <div class="row">                                
+                                <div class="col l3 m12  s12 icon">
+                                    <i class="fa fa-desktop"></i> <!-- icon -->
+                                </div>                                
+                                  <div class="col m12 l9 s12 skill-line a5 wow fadeIn" data-wow-delay="0.5s">
+                                     <h3>Find Me On</h3>
+                                    <div class="section-item-details">
+                                        <div class="address-details"> <!-- address  -->
+                                            <h4><a href="http://www.ashleytam.ca">www.ashleytam.ca</a></h4> 
+                                            <h4><a href="https://github.com/ashleytam">www.github.com/ashleytam</a></h4> 
+                                            <h4> <a href="https://ca.linkedin.com/in/tamashley">www.linkedin.com/in/tamashley</a></h4> 
+                                        </div>                         
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+                        <!-- SKILLS -->
+                        <div class="col l12 m12 s12  skills sidebar-item" >
+                            <div class="row">
+                                <div class="col m12 l3 s12 icon">
+                                    <i class="fa fa-code"></i> <!-- icon -->
+                                </div>
+                                 <!-- Skills -->
+                                <div class="col m12 l9 s12 skill-line a5 wow fadeIn" data-wow-delay="0.5s">
+                                    <h3>Technical Skills </h3>
+                                    
+                                    <span>PHOTOSHOP / ILLUSTRATOR</span>                                    
+                                    <div class="progress">
+                                        <div class="determinate"> 100% </div>
+                                    </div>
+                                    
+                                    <span>HTML5</span>
+                                    <div class="progress">
+                                        <div class="determinate"> 100%</div>
+                                    </div>
+                                    
+                                    <span>CSS3</span>
+                                    <div class="progress">
+                                        <div class="determinate">100%</div>
+                                    </div>
+
+                                    <span>ILLUSTRATION</span>
+                                    <div class="progress">
+                                        <div class="determinate">95%</div>
+                                    </div>
+
+                                    <span>WORDPRESS</span>
+                                    <div class="progress">
+                                        <div class="determinate">90%</div>
+                                    </div>
+
+
+                                     <span>JAVASCRIPT</span>
+                                    <div class="progress">
+                                        <div class="determinate">85%</div>
+                                    </div>
+
+
+                                    <span>OBJECTIVE C</span>
+                                    <div class="progress">
+                                        <div class="determinate">65%</div>
+                                    </div>
+
+                            
+
+                                    <span>DJANGO</span>
+                                    <div class="progress">
+                                        <div class="determinate">30%</div>
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col l12 m12 s12  skills sidebar-item" >
+                            <div class="row">
+                                <div class="col m12 l3 s12 icon">
+                                    <i class="fa fa-cogs"></i> <!-- icon -->
+                                </div>
+                                 <!-- Skills -->
+                                <div class="col m12 l9 s12 skill-line a5 wow fadeIn" data-wow-delay="0.5s">
+                                    <h3>Personal Skills </h3>
+                                    
+                                    <li>Team player</li>                                   
+                                   
+                                    
+                                   <li>Can learn quickly</li> 
+                                    
+                                    
+                                   <li>Comfortable working with clients</li> 
+                                    
+
+                                    <li>Can work under pressure</li>
+                                    
+
+                                    <li>Welcomes constructive critisism</li>    
+                                    <li>Strives to become better</li>   
+                                     <li>Experience in Agile Developement </li> 
+                                    
+                                
+                                   
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <!---- Hobbies !-->
+                        <div class="col l12 m12 s12  skills sidebar-item" >
+                            <div class="row">
+                                <div class="col m12 l3 s12 icon">
+                                    <i class="fa fa-heart-o"></i> <!-- icon -->
+                                </div>
+                                 <!-- Skills -->
+                                <div class="col m12 l9 s12 skill-line a5 wow fadeIn" data-wow-delay="0.5s">
+                                    <h3>Hobbies </h3>
+            
+                                    <li>Camping & Hiking </li> 
+                                    <li>Keeping and Owning Reptiles</li> 
+                                    <li>Admin of Ottawa Area Reptile Club </li> 
+                                    <li>Playing League of Legends </li> 
+                                    <li>Playing Guitar</li> 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>   <!-- end row -->
+                </aside><!-- end sidebar -->
+
+
+                <!-- =========================================
+                   Horizontal Nav
+                ==========================================-->
+                <a id="top" class="smooth"></a>
+                <section class="col s12 m12 l8 section">
+                    <div class="row">
+                        <div class="section-wrapper hide-on-small-only z-depth-1 no-padding">                            
+                            
+                            <div class="newnav ">
+                                       <ul>                                  
+                                        <li><a href="#cover">Cover Letter</a></li>                                        
+                                        <li><a href="#work">Work Experience</a></li>
+                                        <li><a href="#education">Education</a></li>
+                                         <li><a href="#skills">Skills</a></li>
+                                        <li><a href="#references">References</a></li>
+                                       
+                                      </ul>
+                                    </div>                         
+                        </div>
+                 <!-- ========================================
+                     Cover latter 
+                 ==========================================-->
+
+                
+                    <div class="cover-latter z-depth-1">
+                        <div class="cover-title">
+                             <a id="cover" class="smooth"></a>
+                            <span>March 12, 2016</span>
+                            <h2>Nav Canada</h2>
+                            <p>
+                                
+                                P.O. Box 3411 Station 'T' <br>
+                                Ottawa, ON K1P 5L6
+                            </p>
+                        </div>
+                        <h4 class="cover-title">Hi Nav Canada,</h4>
+                        <p> My name is Ashley Tam and I am a web designer and developer living in Ottawa! I saw a post on the Ottawa SubReddit leading to your job posting and it looks like a position at Nav Canada would be a wonderful opportunity.
+
+     My background is in web design but in the past few years I have turned my focus to web development and hope to develop my career further by gaining more experience in different programming languages. </p>
+           
+<p>
+    In my last project, I helped develop an mobile management application that tracked equipment and fleets for companies that provide energy, construction, and agriculture rental equipment and fluid transport.
+
+The application provided checklists and tracking abilities to both the workers and management which ensured the equipment was safe to use and all up to date. 
+The current mobile application is now being used by several different fluid transport companies throughout Canada and the US. I believe my experience in working on this app allows me to understand the commitment to aviation safety and efficiency at Nav Canada.</p>
+                        
+                        <p>Although I do not have vast experience in Django, I am always ready for the challenge and motivated to learn new skills. To reintroduce myself to Python and Django I have created this interactive resume using the Django framework, HTML and CSS to help showcase my ability to learn quickly and apply the knowledge toward a workable application. This continued education has allowed me to stay ahead of the curve and deliver exceptional work to each employer I’ve worked for - both full-time and contract. 
+</p>
+                        <div class="cover-title">
+                            <p>Your Sincerely</p>
+                        </div>
+                        <div class="signature">
+                            <img src="{% static 'images/sig.png' %}" alt="" class="img-responsive"></img>                           
+                                                        <h4>Ashley Tam</h4>
+                           
+                                                     
+                        </div>
+                    </div>
+
+                <!-- =========================================
+                   Work experiences
+                ==========================================-->
+
+               
+                        <div class="section-wrapper z-depth-1">                            
+                            <div class="section-icon col s12 m12 l2">
+                                <i class="fa fa-suitcase"></i>
+                            </div>
+                            <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
+                                 <a id="work" class="smooth"></a>
+                                <h2>Work Experience</h2>
+
+                                <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
+                                    <h3>Freelance Web Developer</h3>
+                                    <span>JAN 2015 - CURRENT </span>
+                                    <p>As a freelance designer and developer I cater to small businesses and startups. With large focus on providing businesses with the tools and technology to help grow their business.I offer a variety of services such as web development, e-commerce, social media marketing, graphic and brand design, print design and many more. </p>
+                                </div>
+                                <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s">
+                                    <h3>Web Developer + UX Designer + Mobile Designer and Developer <span> @ CornerPortal Inc</span></h3>
+                                    <span>JAN 2011 - DEC 2015 </span>
+                                    <p>I've had the opportunity to work on a wide variety of projects exposing me to many different web development technologies and languages such as Objective C and Django. As both a developer and designer, I am able to contribute to both the coding and designing side. 
+
+                                    I worked collaboratively with project managers, designers, other developers and collaborating with clients one-on-one. </p>
+                                </div>
+
+                                 <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s">
+                                    <h3>Graphic Designer + Mobile Designer and Developer <span> @ Ottercall</span></h3>
+                                    <span>MAY 2011 - JUNE 2013 </span>
+                                    <p>Ottercall is a mobile language learning software company creating mobile apps for iphone, android, and the web to make language learning easier and more enjoyable. For Ottercall I had the opportunity to develop the UX Design and graphics. I produced all the graphic design elements and animated the the characters within the app using a digital tablet to illustrate and Objective C to compile the frames. In addition I helped develop marketing material such as the branding and web development/design.
+
+                                    I worked collaboratively with project managers, designers, other developers and collaborating with clients one-on-one. </p>
+                                </div>
+                                <div class="custom-content-wrapper wow fadeIn a4" data-wow-delay="0.4s">
+                                    <h3>Junior Programmer <span> @ Canada Revenue Agency</span></h3>
+                                    <span>APR 2010 - JAN 2011 </span>
+                                    <p>Responsibilities include webpage maintenance, update and creation, VBA program development and performing client web and web application requests.  </p>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <!-- ========================================
+                         Education 
+                        ==========================================-->
+
+                        <div class="section-wrapper z-depth-1">
+                            <div class="section-icon col s12 m12 l2">
+                                <i class="fa fa-graduation-cap"></i>
+                            </div>
+                            <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s" >
+                                <a id="education" class="smooth"></a>
+                                <h2>Education </h2>
+                                
+                                <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" >
+                                    <h3>Bachelor of Information Technology<span> @ Carleton University 2008 - 2013</span></h3>
+                                    <span> Major in Interactive Multimedia and Design  </span>
+                                    <p> Graduated with Distinction in April 2013 <br>Co-operative Education, Dean’s Honour List 2009 - 2013</p>
+                                </div>
+                                <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s" >
+                                    <h3>Advanced Technology Diploma <span> @ Algonquin College 2008 - 2013</span></h3>
+                                    <span>Interactive Multimedia and Design </span>
+                                    <p>Graduated with Honours in April 2013 <br>In collaboration with Carleton University. </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- ========================================
+                              Skills
+                        ==========================================-->
+
+                        <div class="section-wrapper z-depth-1">                           
+                            <div class="section-icon col s12 m12 l2">
+                                 <a id="skills" class="smooth"></a>
+                                <i class="fa fa-tasks"></i>
+                            </div>
+                            <div class="interests col s12 m12 l10 wow fadeIn" data-wow-delay="0.1s"> 
+
+                                <h2>Highly Proficient </h2>
+                                <ul> <!-- interetsr icon start -->
+                                    <li><img src="{% static 'icons/html.png' %}" class="tooltipped"  data-position="top" data-delay="50" data-tooltip="HTML5"/></li>
+                                    <li><img src="{% static 'icons/css.png' %}" class="tooltipped"  data-position="top" data-delay="50" data-tooltip="CSS3"/></li>
+                                    <li><img src="{% static 'icons/wordpress.png' %}" class="tooltipped"  data-position="top" data-delay="50" data-tooltip="Wordpress"/></li>
+                                    <li><img src="{% static 'icons/github.png' %}" class="tooltipped"  data-position="top" data-delay="50" data-tooltip="Github"/></li>
+                                    <li><img src="{% static 'icons/ps.png' %}" class="tooltipped"  data-position="top" data-delay="50" data-tooltip="Adobe Photoshop"/></li>
+                                    <li><img src="{% static 'icons/ai.png' %}" class="tooltipped"  data-position="top" data-delay="50" data-tooltip="Adobe Illustrator"/></li>
+                                </ul> <!-- interetsr icon end -->
+                            </div>                          
+                        </div>
+
+                        <div class="section-wrapper refarances z-depth-1">
+                        <div class="row"> 
+                            <div class="section-icon col s12 m12 l2">
+                                 <a id="references" class="smooth"></a>
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
+                                <h2>References</h2>
+
+                                <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" >
+                                    <h3>Michael Ayukawa</h3>
+                                    <span>Co-Founder @ CornerPortal Inc </span>
+                                    <p>Mike.ayukawa@gmail.com • (613) 219 - 0456</p>
+                                </div>
+
+                                <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s" >
+                                    <h3>Elias Majic</h3>
+                                    <span>Software Engineer @ Weebly</span>
+                                    <p>Elias.majic@gmail.com • (415) 996 - 9963</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- =======================================
+                          portfolio Website
+                        ==========================================-->
+
+                        
+                    </div><!-- end row -->
+                </section><!-- end section -->
+            </div> <!-- end row -->
+        </div>  <!-- end container -->
+        
+        <!--=====================
+                JavaScript
+        ===================== -->
+        <!-- Jquery core js-->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        
+        <!-- materialize js-->
+        <script src="{% static 'js/materialize.min.js' %}"></script>
+        
+        <!-- wow js-->
+        <script src="{% static 'js/wow.min.js' %}"></script>
+        
+        <!-- Map api -->
+        <script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        
+        <!-- Masonry js-->
+        <script src="{% static 'js/masonry.pkgd.js' %}"></script>
+
+        <script src="{% static 'js/validator.min.js' %}"></script>
+        
+        <!-- Customized js -->
+        <script src="{% static 'js/init.js' %}"></script>
+
+        <!-- Smooth Scroll -->
+       
+        <script>
+       $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
+        </script>
+
     </body>
 </html>
